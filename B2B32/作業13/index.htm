@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>課堂作業13</title>
+	<style>
+      @keyframes mimi{
+      0% {background:LightCoral; left:80px; top:10px;}
+      25% {background:Khaki; left:1100px; top:10px;}
+      50% {background:skyBlue; left:1100px; top:450px;}
+      75% {background:MediumSeaGreen; left:80px; top:450px;}
+      100% {background:LightCoral; left:80px; top:10px;}
+	}
+	.box{
+	width: 120px;
+	height: 120px;
+	color: blue;
+	font-weight: white;
+	font-size: x-large;
+	border-radius:80%;
+	background-color: Aqua;
+	border: none;/*border: 1px dotted block; */
+	text-align:center;
+	line-height: 120px;
+	position:absolute;
+	animation: mimi 15s ease-in-out alternate infinite;
+	}
+</style>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		$('#btn1').mouseover(function(){
+		$(".box").css("border-radius","10%");
+		})
+
+		$('#btn2').mouseover(function(){
+		$(".box").css("border-radius","60%");
+		})
+
+		$('#btn3').mouseover(function(){
+		$("#box01").html("B2B32");
+		})
+
+		$('#btn4').mouseover(function(){
+		$("#box01").html("周祖安");
+		})
+		});
+</script>
+</head>
+<body>
+<div class="box" id="box01">HEY</div>
+<input type="button" id="btn1" value="方形"><br>
+<input type="button" id="btn2" value="圓形"><br>
+<input type="button" id="btn3" value="B2B32"><br>
+<input type="button" id="btn4" value="周祖安"><br>
+</body>
+
+</html>
